@@ -3,91 +3,171 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Javier Peralta | Consultoría en Ciberseguridad y Auditoría IT/OT</title>
-<meta name="description" content="Consultor senior en ciberseguridad, ISO 27001, SOC, DLP, continuidad de negocio y auditoría de sistemas. Más de 18 años de experiencia.">
+<title>Javier Peralta | Diagnóstico de ciberseguridad, ISO 27001, 22301, 42001 y auditoría TI</title>
+<meta name="description" content="Consultor senior en ciberseguridad con más de 18 años de experiencia. Diagnóstico de ciberseguridad, evaluación ISO 27001, ISO 22301, ISO 42001 y auditoría de TI en Colombia.">
+<meta property="og:title" content="Javier Peralta | Consultoría en ciberseguridad y auditoría TI">
+<meta property="og:description" content="Sepa qué le falta para certificarse y qué hacer primero. Diagnóstico, ISO 27001, 22301, 42001 y auditoría TI.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f7f9fb;--card:#fff;--text:#14202b;--muted:#5b6b7a;--accent:#0b6e8a;--line:#dde4ea;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e161d;--card:#16212a;--text:#e8eef3;--muted:#9fb0bf;--accent:#4cc3e0;--line:#243541}}
+:root{--bg:#f5f7f8;--surface:#ffffff;--ink:#16232c;--muted:#4f5f69;--rule:#d3dce1;--teal:#0e5a5c;--teal-ink:#ffffff;--ok:#1d6b3a;--warn:#8a5a00;--gap:#a3321b;
+--serif:"Newsreader",Georgia,serif;--sans:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10181d;--surface:#17232a;--ink:#e8eef1;--muted:#a3b3bc;--rule:#2b3b44;--teal:#5fc0c2;--teal-ink:#08272a;--ok:#6fd08f;--warn:#e5b24d;--gap:#ff8a6e}}
+:root[data-theme="dark"]{--bg:#10181d;--surface:#17232a;--ink:#e8eef1;--muted:#a3b3bc;--rule:#2b3b44;--teal:#5fc0c2;--teal-ink:#08272a;--ok:#6fd08f;--warn:#e5b24d;--gap:#ff8a6e}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-.w{max-width:960px;margin:0 auto;padding:0 20px}
-header{padding:64px 0 40px}
-.tag{color:var(--accent);font-weight:600;letter-spacing:.06em;text-transform:uppercase;font-size:13px}
-h1{font-size:clamp(30px,6vw,46px);line-height:1.15;margin:8px 0 14px}
-h2{font-size:26px;margin:0 0 20px}
-p.lead{font-size:18px;color:var(--muted);max-width:680px}
-.btn{display:inline-block;background:var(--accent);color:#fff;padding:12px 22px;border-radius:8px;text-decoration:none;font-weight:600;margin:10px 10px 0 0}
-.btn.o{background:transparent;color:var(--accent);border:1.5px solid var(--accent)}
-section{padding:40px 0;border-top:1px solid var(--line)}
-.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
-.c{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px}
-.c h3{margin:0 0 6px;font-size:18px}
-.c p{margin:0;color:var(--muted);font-size:15px}
-.stats{display:flex;flex-wrap:wrap;gap:28px;margin-top:28px}
-.stats b{display:block;font-size:30px;color:var(--accent)}
-.stats span{color:var(--muted);font-size:14px}
-.chips{display:flex;flex-wrap:wrap;gap:8px}
-.chips span{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:14px}
-footer{padding:36px 0;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
-a{color:var(--accent)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--sans)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+header.top{border-bottom:1px solid var(--rule)}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:16px;padding-bottom:16px;gap:16px}
+.brand{font:600 20px var(--serif);text-decoration:none}
+.brand small{display:block;font:400 13px var(--sans);color:var(--muted)}
+.btn{display:inline-block;background:var(--teal);color:var(--teal-ink);padding:12px 20px;border-radius:6px;font-weight:600;text-decoration:none;border:2px solid var(--teal)}
+.btn.alt{background:transparent;color:var(--ink);border-color:var(--rule)}
+.btn:hover{filter:brightness(1.08)}
+.hero{padding:64px 0 56px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+h1{font:600 clamp(34px,5vw,54px)/1.08 var(--serif);margin:0 0 20px;letter-spacing:-.01em}
+.lead{color:var(--muted);font-size:19px;max-width:52ch;margin:0 0 28px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.sheet{background:var(--surface);border:1px solid var(--rule);border-radius:8px;overflow:hidden}
+.sheet h2{font:600 15px var(--sans);margin:0;padding:14px 16px;border-bottom:1px solid var(--rule)}
+.sheet table{width:100%;border-collapse:collapse;font-size:14.5px}
+.sheet td{padding:11px 16px;border-bottom:1px solid var(--rule);vertical-align:top}
+.sheet tr:last-child td{border-bottom:0}
+.sheet td:first-child{color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums}
+.st{font-weight:600;white-space:nowrap}
+.st.ok{color:var(--ok)}.st.pa{color:var(--warn)}.st.no{color:var(--gap)}
+.sheet p{margin:0;padding:12px 16px;font-size:13px;color:var(--muted);border-top:1px solid var(--rule)}
+section{padding:60px 0;border-top:1px solid var(--rule)}
+h2.s{font:600 clamp(28px,3.6vw,38px)/1.15 var(--serif);margin:0 0 12px}
+.sub{color:var(--muted);max-width:62ch;margin:0 0 36px}
+.svc{display:grid;gap:0;border:1px solid var(--rule);border-radius:8px;background:var(--surface);overflow:hidden}
+.svc article{display:grid;grid-template-columns:230px 1fr 1fr;gap:24px;padding:24px;border-bottom:1px solid var(--rule)}
+.svc article:last-child{border-bottom:0}
+.svc h3{font:600 21px/1.25 var(--serif);margin:0}
+.svc h3 span{display:block;font:400 14px var(--sans);color:var(--muted);margin-top:4px}
+.svc h4{font:600 14px var(--sans);margin:0 0 6px}
+.svc p{margin:0;font-size:15.5px;color:var(--muted)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;counter-reset:s;padding:0;list-style:none;margin:0}
+.steps li{counter-increment:s;border-top:3px solid var(--teal);padding-top:14px}
+.steps li::before{content:"Paso " counter(s);font-weight:600;font-size:14px;color:var(--teal)}
+.steps strong{display:block;font:600 19px var(--serif);margin:4px 0 6px}
+.steps span{color:var(--muted);font-size:15.5px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.facts{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.facts li{padding-left:18px;position:relative}
+.facts li::before{content:"";position:absolute;left:0;top:.72em;width:8px;height:2px;background:var(--teal)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.chips li{border:1px solid var(--rule);background:var(--surface);padding:5px 12px;border-radius:99px;font-size:14.5px}
+.contact{background:var(--teal);color:var(--teal-ink);border-top:0}
+.contact h2.s,.contact .sub{color:var(--teal-ink)}
+.contact .btn{background:var(--teal-ink);color:var(--teal);border-color:var(--teal-ink)}
+.contact .btn.alt{background:transparent;color:var(--teal-ink);border-color:var(--teal-ink)}
+footer{padding:28px 0;font-size:14px;color:var(--muted)}
+@media (max-width:860px){.hero .wrap,.two{grid-template-columns:1fr}.svc article{grid-template-columns:1fr;gap:12px}.steps{grid-template-columns:1fr 1fr}.hero{padding-top:40px}}
+@media (max-width:520px){.steps{grid-template-columns:1fr}.sheet td:first-child{white-space:normal}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
-<header><div class="w">
-<div class="tag">Ciberseguridad · Auditoría IT/OT · GRC</div>
-<h1>Javier Mauricio Peralta Cubillos</h1>
-<p class="lead">Ingeniero de Sistemas y consultor senior en ciberseguridad. Ayudo a las organizaciones a proteger su información, cumplir normas y operar con continuidad, traduciendo objetivos de negocio en estrategias de seguridad.</p>
-<a class="btn" href="#contacto">Solicitar una consultoría</a>
-<a class="btn o" href="#servicios">Ver servicios</a>
-<div class="stats">
-<div><b>+18</b><span>años de experiencia</span></div>
-<div><b>ISO 27001 · 22301 · 42001</b><span>normas y certificaciones</span></div>
-<div><b>IT / OT</b><span>seguridad y auditoría</span></div>
-</div>
+<header class="top"><div class="wrap">
+<a class="brand" href="#">Javier Peralta<small>Consultoría en ciberseguridad y auditoría TI</small></a>
+<a class="btn" href="#contacto">Solicitar diagnóstico</a>
 </div></header>
 
-<section id="servicios"><div class="w">
-<h2>Servicios</h2>
-<div class="g">
-<div class="c"><h3>Assessment y preparación ISO 27001:2022</h3><p>Diagnóstico independiente de brechas, plan de implementación de controles y preparación previa a la certificación.</p></div>
-<div class="c"><h3>Auditoría de TI y de sistemas</h3><p>Auditorías de controles generales, seguridad, licenciamiento, infraestructura y cumplimiento regulatorio, con enfoque en riesgo.</p></div>
-<div class="c"><h3>Implementación y gobierno de SOC</h3><p>Definición de arquitectura de alertas, coordinación con proveedores y puesta en marcha de operaciones de monitoreo.</p></div>
-<div class="c"><h3>DLP y controles en la nube</h3><p>Administración y configuración de prevención de fuga de datos y controles de seguridad en nube y Data Center.</p></div>
-<div class="c"><h3>Continuidad de negocio (ISO 22301)</h3><p>Auditoría y diseño de BCP/DRP, seguimiento a pruebas de continuidad y recuperación.</p></div>
-<div class="c"><h3>Gobernanza de IA (ISO 42001)</h3><p>Orientación para implementar un sistema de gestión de inteligencia artificial responsable y alineado con la norma.</p></div>
-<div class="c"><h3>Auditoría continua y CAAT's</h3><p>Automatización de pruebas de auditoría con ACL e IDEA para analizar el 100 % de los datos y ejecutar controles periódicos.</p></div>
-<div class="c"><h3>Desarrollo seguro y OWASP</h3><p>Definición de pruebas de seguridad desde el Sprint 0 y coordinación con equipos de desarrollo.</p></div>
-<div class="c"><h3>Formación y capacitación</h3><p>Instrucción en auditoría, seguridad de la información y gestión de calidad. Docente de ICONTEC.</p></div>
-</div></div></section>
-
-<section><div class="w">
-<h2>Experiencia destacada</h2>
-<div class="g">
-<div class="c"><h3>Toroidee</h3><p>Senior Cybersecurity Consultant &amp; Audit IT, desde 2025.</p></div>
-<div class="c"><h3>Canacol Energy</h3><p>Assessment independiente ISO 27001:2022 previo a la certificación.</p></div>
-<div class="c"><h3>Colombia Compra Eficiente</h3><p>Apoyo en riesgos de seguridad e implementación del proyecto de SOC.</p></div>
-<div class="c"><h3>Interrapidísimo</h3><p>Subgerencia de Seguridad de la Información: DLP, nube y alertas de Data Center.</p></div>
-<div class="c"><h3>Sector financiero</h3><p>Auditorías en ACH Colombia y Crezcamos, con foco en cumplimiento ante la Superintendencia Financiera.</p></div>
-<div class="c"><h3>Entidades y grupos empresariales</h3><p>SAE, Colsubsidio, Mazars, Grupo Televisa y otras organizaciones.</p></div>
-</div></div></section>
-
-<section><div class="w">
-<h2>Certificaciones y herramientas</h2>
-<div class="chips">
-<span>ISO 42001:2023</span><span>ISO 22301:2019</span><span>Auditor Interno ISO 27001:2022</span><span>Project Management Foundation</span><span>Scrum Foundation</span><span>ISC2 CC (candidato)</span><span>Maestría en Ciberseguridad (en curso)</span>
+<main>
+<div class="hero"><div class="wrap">
+<div>
+<h1>Sepa qué le falta para certificarse y qué hacer primero</h1>
+<p class="lead">Diagnóstico de ciberseguridad, evaluación frente a ISO 27001, 22301 y 42001, y auditoría de TI. Le entrego un informe claro, con brechas priorizadas y un plan que su equipo puede ejecutar.</p>
+<div class="cta"><a class="btn" href="#contacto">Solicitar diagnóstico</a><a class="btn alt" href="#servicios">Ver servicios</a></div>
 </div>
-<p style="margin-top:18px" class="chips"><span>ACL</span><span>IDEA</span><span>QRadar</span><span>Qualys</span><span>Safetica DLP</span><span>ESET</span><span>OWASP</span><span>COBIT</span></p>
+<div class="sheet" role="img" aria-label="Ejemplo ilustrativo de hoja de evaluación con cuatro controles de ISO 27001 y su estado">
+<h2>Hoja de evaluación ISO 27001:2022 (ejemplo)</h2>
+<table>
+<tr><td>A.5.1</td><td>Políticas de seguridad de la información</td><td class="st ok">✓ Cumple</td></tr>
+<tr><td>A.5.30</td><td>Preparación de TIC para la continuidad</td><td class="st no">✕ Brecha</td></tr>
+<tr><td>A.5.23</td><td>Seguridad en servicios en la nube</td><td class="st pa">◐ Parcial</td></tr>
+<tr><td>A.8.12</td><td>Prevención de fuga de datos</td><td class="st no">✕ Brecha</td></tr>
+</table>
+<p>Así se ve el resultado: cada control con su estado, evidencia y acción recomendada.</p>
+</div>
+</div></div>
+
+<section id="servicios"><div class="wrap">
+<h2 class="s">Cinco servicios, cada uno con un entregable claro</h2>
+<p class="sub">Si no sabe por dónde empezar, empiece por el diagnóstico. Define qué servicio necesita realmente.</p>
+<div class="svc">
+<article><h3>Diagnóstico de ciberseguridad<span>El mejor punto de partida</span></h3>
+<div><h4>Para quién</h4><p>Empresas que quieren conocer su nivel de riesgo real antes de invertir en herramientas o certificaciones.</p></div>
+<div><h4>Qué recibe</h4><p>Informe de brechas priorizadas por riesgo, hoja de ruta y recomendaciones para la gerencia.</p></div></article>
+<article><h3>Evaluación ISO 27001:2022<span>Seguridad de la información</span></h3>
+<div><h4>Para quién</h4><p>Organizaciones que van a certificarse o que sus clientes les exigen la norma.</p></div>
+<div><h4>Qué recibe</h4><p>Evaluación independiente de controles, plan de implementación y preparación para la auditoría de certificación.</p></div></article>
+<article><h3>Evaluación ISO 22301:2019<span>Continuidad de negocio</span></h3>
+<div><h4>Para quién</h4><p>Empresas que no pueden parar su operación y deben demostrar que se recuperan.</p></div>
+<div><h4>Qué recibe</h4><p>Revisión del BCP y el DRP, análisis de brechas y seguimiento a las pruebas de continuidad.</p></div></article>
+<article><h3>Evaluación ISO 42001:2023<span>Gobernanza de inteligencia artificial</span></h3>
+<div><h4>Para quién</h4><p>Empresas que ya usan o desarrollan IA y necesitan controlarla con criterios formales.</p></div>
+<div><h4>Qué recibe</h4><p>Diagnóstico frente a la norma y una guía para implementar un sistema de gestión de IA responsable.</p></div></article>
+<article><h3>Auditoría de TI<span>Controles, riesgo y cumplimiento</span></h3>
+<div><h4>Para quién</h4><p>Entidades que responden a juntas, revisores fiscales o entes de vigilancia como la Superfinanciera.</p></div>
+<div><h4>Qué recibe</h4><p>Informe con hallazgos, evidencias, nivel de riesgo y recomendaciones. Con pruebas sobre el 100 % de los datos cuando aplica.</p></div></article>
+</div>
 </div></section>
 
-<section id="contacto"><div class="w">
-<h2>Hablemos de su proyecto</h2>
-<p class="lead">Cuéntenos su necesidad de seguridad, auditoría o cumplimiento y le responderé con una propuesta.</p>
-<a class="btn" href="mailto:luc2598@gmail.com?subject=Consulta%20de%20servicios%20de%20ciberseguridad">Escribir por correo</a>
-<a class="btn o" href="https://wa.me/573024621429" rel="noopener">WhatsApp</a>
-<a class="btn o" href="https://linkedin.com/in/javiermauricioperaltacubillos" rel="noopener">LinkedIn</a>
+<section id="proceso"><div class="wrap">
+<h2 class="s">Cómo trabajamos</h2>
+<p class="sub">Un proceso corto, con alcance y entregables acordados desde el principio.</p>
+<ol class="steps">
+<li><strong>Conversación inicial</strong><span>Entiendo su necesidad, su sector y su fecha límite. Sin costo.</span></li>
+<li><strong>Propuesta</strong><span>Alcance, entregables, tiempos y valor por escrito.</span></li>
+<li><strong>Ejecución</strong><span>Entrevistas, revisión de evidencias y pruebas, con avances periódicos.</span></li>
+<li><strong>Informe y plan</strong><span>Hallazgos priorizados y un plan de acción que su equipo puede seguir.</span></li>
+</ol>
 </div></section>
 
-<footer><div class="w">© <span id="y"></span> Javier Mauricio Peralta Cubillos · Bogotá, Colombia · Miembro de ISACA</div></footer>
-<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+<section id="perfil"><div class="wrap two">
+<div>
+<h2 class="s">Quién lo atiende</h2>
+<p class="sub" style="margin-bottom:18px">Ingeniero de Sistemas con más de 18 años en seguridad de la información y auditoría de sistemas, en entornos IT y OT.</p>
+<ul class="facts">
+<li>Consultor senior en ciberseguridad y auditoría TI en Toroidee.</li>
+<li>Docente de ICONTEC en auditoría y seguridad de la información.</li>
+<li>Miembro de ISACA. Maestría en Ciberseguridad en curso.</li>
+<li>Sede en Bogotá, atención a todo el país y de forma remota.</li>
+</ul>
+</div>
+<div>
+<h2 class="s">Dónde he trabajado</h2>
+<p class="sub" style="margin-bottom:18px">Experiencia en energía, sector financiero, sector público y logística.</p>
+<ul class="chips">
+<li>Canacol Energy</li><li>Colombia Compra Eficiente</li><li>Interrapidísimo</li><li>ACH Colombia</li><li>Crezcamos</li><li>Colsubsidio</li><li>SAE</li><li>Mazars</li><li>Grupo Televisa</li>
+</ul>
+<p class="sub" style="margin:22px 0 10px">Certificaciones y herramientas</p>
+<ul class="chips">
+<li>ISO 42001</li><li>ISO 22301</li><li>Auditor interno ISO 27001</li><li>COBIT</li><li>OWASP</li><li>ACL / IDEA</li><li>QRadar</li><li>Qualys</li>
+</ul>
+</div>
+</div></section>
+
+<section id="contacto" class="contact"><div class="wrap">
+<h2 class="s">Cuénteme qué necesita y le respondo con una propuesta</h2>
+<p class="sub">Escríbame por el medio que prefiera. Indique el tipo de empresa y qué norma o auditoría debe cumplir.</p>
+<div class="cta">
+<a class="btn" href="https://wa.me/573024621429">Escribir por WhatsApp</a>
+<a class="btn alt" href="mailto:luc2598@gmail.com?subject=Consulta%20de%20servicios%20de%20ciberseguridad">Escribir por correo</a>
+<a class="btn alt" href="https://linkedin.com/in/javiermauricioperaltacubillos">LinkedIn</a>
+</div>
+</div></section>
+</main>
+
+<footer><div class="wrap">© Javier Mauricio Peralta Cubillos. Bogotá, Colombia.</div></footer>
 </body>
 </html>
